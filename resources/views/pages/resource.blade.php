@@ -4,7 +4,7 @@
 
 <div class="home_">
     <div class="home_background_container_ prlx_parent">
-        <div class="home_background_ prlx" style="background-image:url({{ asset ( 'assets/images/contact_background.jpg')}})"></div>
+        <div class="home_background_ prlx" style="background-image:url({{ asset ( 'assets/images/1.jpg')}})"></div>
     </div>
     <div class="home_content_">
         <h1>Resources</h1>
@@ -28,7 +28,7 @@
 
         <div class="aspect-tab-content">
 
-            <p class="text-dark">{{ $graduation->description }}</p>
+            <p class="text-dark text-center">{{ $graduation->description }}</p>
 
             <div class="sentiment-wrapper">
 
@@ -79,6 +79,12 @@
             No graduations available.
         </div>
         @endforelse
+    </div>
+
+    <!-- Pagination Links -->
+    <div class="news_page_nav">
+        {{ $graduations->links() }}
+
     </div>
 
 </div>

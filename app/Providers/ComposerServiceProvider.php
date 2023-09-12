@@ -23,7 +23,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        View::composer('layouts.app', function ($view) {
+        View::composer('pages.home', function ($view) {
 
             $timer = Timer::where('is_active', true)
             ->where('target_date', '>=', Carbon::now())
@@ -32,12 +32,15 @@ class ComposerServiceProvider extends ServiceProvider
 
             if($timer){
 
-                $formattedDate = Carbon::parse($timer->target_date)->format('d/m/Y');
+                $formattedDate = $timer->target_date;
+                $title = $timer->title;
     
                 $view->with('timer', $formattedDate);
+                $view->with('timertitle', $title);
             } else {
 
                 $view->with('timer', null);
+                $view->with('timertitle', '');
             }
 
         });

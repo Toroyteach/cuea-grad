@@ -4,7 +4,7 @@
 
 <div class="home_">
     <div class="home_background_container_ prlx_parent">
-        <div class="home_background_ prlx" style="background-image:url( {{ asset ( 'assets/images/news_background.jpg')}} )"></div>
+        <div class="home_background_ prlx" style="background-image:url( {{ asset ( 'assets/images/1.jpg')}} )"></div>
     </div>
     <div class="home_content_">
         <h1>Events</h1>
@@ -44,11 +44,11 @@
                                     @endforeach
 
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carousel-one" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carousel-one" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>

@@ -4,7 +4,7 @@
 
 <div class="home_">
     <div class="home_background_container_ prlx_parent">
-        <div class="home_background_ prlx" style="background-image:url({{ asset ( 'assets/images/news_background.jpg')}})"></div>
+        <div class="home_background_ prlx" style="background-image:url({{ asset ( 'assets/images/1.jpg')}})"></div>
     </div>
     <div class="home_content_">
         <h1>{{ $newsItem->title }}</h1>

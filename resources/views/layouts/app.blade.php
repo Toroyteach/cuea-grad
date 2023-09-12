@@ -41,6 +41,7 @@
                             <li class="main_nav_item"><a href="{{ route('home')}}">home</a></li>
                             <li class="main_nav_item"><a href="{{ route('events')}}">news</a></li>
                             <li class="main_nav_item"><a href="{{ route('resources')}}">Resources</a></li>
+                            <li class="main_nav_item"><a href="{{ route('score')}}">Results</a></li>
                             <li class="main_nav_item"><a href="{{ route('contact')}}">contact</a></li>
                         </ul>
                     </div>
@@ -49,7 +50,7 @@
 
             <div class="header_side d-flex flex-row justify-content-center">
                 <!-- <img src="images/phone-call.svg" alt=""> -->
-                @include('includes.timer')
+                
             </div>
 
             <!-- Hamburger -->
@@ -58,9 +59,6 @@
             </div>
 
         </header>
-        <div class="timer_mobile d-flex flex-row justify-content-center">
-            @include('includes.timer')
-        </div>
 
 
 
@@ -79,6 +77,7 @@
                         <li class="menu_item menu_mm"><a href="{{ route('home')}}">Home</a></li>
                         <li class="menu_item menu_mm"><a href="{{ route('events')}}">events</a></li>
                         <li class="menu_item menu_mm"><a href="{{ route('resources')}}">resources</a></li>
+                        <li class="menu_item menu_mm"><a href="{{ route('score')}}">Results</a></li>
                         <li class="menu_item menu_mm"><a href="{{ route('contact')}}">Contact</a></li>
                     </ul>
 
@@ -88,8 +87,6 @@
             </div>
 
         </div>
-
-
 
         @yield('content')
 
@@ -118,7 +115,7 @@
                                 </div>
                             </div>
 
-                            <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                            <p class="footer_about_text">The Catholic University of Eastern Africa (CUEA), like most other universities, started in a modest way. It commenced as a graduate school of theology known as the Catholic Higher Institute of Eastern Africa (CHIEA).</p>
 
                         </div>
 
@@ -128,11 +125,10 @@
                             <div class="footer_column_title">Menu</div>
                             <div class="footer_column_content">
                                 <ul>
-                                    <li class="footer_list_item"><a href="#">Home</a></li>
-                                    <li class="footer_list_item"><a href="#">About Us</a></li>
-                                    <li class="footer_list_item"><a href="courses.html">Courses</a></li>
-                                    <li class="footer_list_item"><a href="news.html">News</a></li>
-                                    <li class="footer_list_item"><a href="contact.html">Contact</a></li>
+                                    <li class="footer_list_item"><a href="{{ route('home')}}">Home</a></li>
+                                    <li class="footer_list_item"><a href="{{ route('events')}}">News</a></li>
+                                    <li class="footer_list_item"><a href="{{ route('resources')}}">Resources</a></li>
+                                    <li class="footer_list_item"><a href="{{ route('contact')}}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -140,14 +136,14 @@
                         <!-- Footer Column - Usefull Links -->
 
                         <div class="col-lg-3 footer_col">
-                            <div class="footer_column_title">Usefull Links</div>
+                            <div class="footer_column_title">Social Links</div>
                             <div class="footer_column_content">
                                 <ul>
-                                    <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                                    <li class="footer_list_item"><a href="#">FAQ</a></li>
-                                    <li class="footer_list_item"><a href="#">Community</a></li>
-                                    <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                                    <li class="footer_list_item"><a href="#">Tuitions</a></li>
+                                    <li class="footer_list_item"><a href="https://www.facebook.com/TheCatholicUniversityOfEasternAfricaCuea?ref=bookmarks">facebook</a></li>
+                                    <li class="footer_list_item"><a href="https://twitter.com/cuea_official">Twitter / X</a></li>
+                                    <li class="footer_list_item"><a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFlc0bIii4ELgAAAXSv7FwoC627T297ZRckJk-3YGKNnYyedWZ47zvC6AQMKQDSwLnOaeMDzLc7ot6V4R4TbI9eFwOZ6KUOOZrr7mhDQyjhncIKzrYr1SQ5rg-1FQmy5AhxI_8=&originalReferer=http://cuea.edu/index.php&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fthe-catholic-university-of-eastern-africa-4295b3a9%3Ftrk%3Dhp-identity-name">linkedin</a></li>
+                                    <li class="footer_list_item"><a href="https://www.instagram.com/cuea_official/">Instagram</a></li>
+                                    <li class="footer_list_item"><a href="https://www.youtube.com/channel/UCkPi1mamzw2vcA97zWS76lw">Youtube</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -162,18 +158,18 @@
                                         <div class="footer_contact_icon">
                                             <img src="{{ asset('assets/images/placeholder.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                         </div>
-                                        Blvd Libertad, 34 m05200 Arévalo
+                                        Bogani E Rd, Nairobi
                                     </li>
                                     <li class="footer_contact_item">
                                         <div class="footer_contact_icon">
                                             <img src="{{ asset('assets/images/smartphone.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                         </div>
-                                        0034 37483 2445 322
+                                        0709691024 | 0709 691164
                                     </li>
                                     <li class="footer_contact_item">
                                         <div class="footer_contact_icon">
                                             <img src="{{ asset('assets/images/envelope.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                        </div>hello@company.com
+                                        </div>admissions@cuea.edu
                                     </li>
                                 </ul>
                             </div>
@@ -189,7 +185,7 @@
                         <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | Created with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://toroyteach.com" target="_blank">Toroyteach</a>
+                            </script> All rights reserved | Designed by <a href="https://toroyteach.com" target="_blank">Toroyteach</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
                     </div>
                     <div class="footer_social ml-sm-auto">

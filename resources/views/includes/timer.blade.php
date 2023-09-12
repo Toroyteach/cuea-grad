@@ -1,12 +1,17 @@
-<div class="clock" id="clock1">
-    <div id="countdown">
-        <ul>
-            <li><span id="days"></span>days</li>
-            <li><span id="hours"></span>Hours</li>
-            <li><span id="minutes"></span>Minutes</li>
-            <li><span id="seconds"></span>Seconds</li>
-        </ul>
+<div class="countTimer">
+
+    <!-- Countdown 4-->
+    <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
+        <h3 class="mb-0 font-weight-bold text-white">{{ $timertitle }}</h3>
+        <div id="clock-c" class="countdown">
+            <span id="days"></span>days
+            <span id="hours"></span>Hours
+            <span id="minutes"></span>Minutes
+            <span id="seconds"></span>Seconds
+        </div>
+
     </div>
+
 </div>
 
 <script type="text/javascript">
@@ -14,11 +19,7 @@
     if (timerCheck) {
 
         const countDownDateParts = '{{ $timer}}'.split('/');
-        const countDownDate = new Date(
-            parseInt(countDownDateParts[2]), // Year
-            parseInt(countDownDateParts[1]) - 1, // Month (0-based index)
-            parseInt(countDownDateParts[0]) // Day
-        ).getTime();
+        const countDownDate = new Date(timerCheck).getTime();
 
         const x = setInterval(function() {
             const now = new Date().getTime();
@@ -41,13 +42,15 @@
 
             // Check if less than 1 day is remaining
             if (distance < day) {
-                const countdownElement = document.getElementById("countdown");
+                const countdownElement = document.getElementById("clock-c");
                 countdownElement.style.display = "block";
+
+                countdownElement.classList.add('blink');
             }
 
             // Hide the countdown when date is reached
             if (distance <= 0) {
-                document.getElementById("countdown").style.display = "none";
+                document.getElementById("clock-c").style.display = "none";
                 clearInterval(x);
             }
         }, 1000);

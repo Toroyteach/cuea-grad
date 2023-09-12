@@ -24,8 +24,9 @@ class HomeController extends Controller
         $latestNews = News::where('is_published', true)
             ->where('published_date', '>', Carbon::now())
             ->orderBy('published_date', 'desc')
-            ->take(3)
-            ->get();
+            ->paginate(3);
+
+        //Also send the carousel images if need
 
         return view('pages.home', compact('faqs', 'latestNews'));
     }
@@ -36,7 +37,7 @@ class HomeController extends Controller
         $news = News::where('is_published', true)
             ->where('published_date', '>', Carbon::now())
             ->orderBy('published_date', 'desc')
-            ->paginate(10);
+            ->paginate(6);
 
         return view('pages.events', compact('news'));
     }
@@ -53,11 +54,8 @@ class HomeController extends Controller
             ->whereHas('resources', function ($query) {
                 $query->where('is_downloadable', true);
             })
-            ->get();
-
-        // Load media for each resource
-        //$graduations->loadMedia(['resources']);
-        //dd($graduations);
+            ->orderBy('created_at', 'desc')
+            ->paginate(3);
 
         return view('pages.resource', compact('graduations'));
     }
@@ -105,7 +103,12 @@ class HomeController extends Controller
 
         // Retrieve the latest news items for the sidebar
         $latestNews = News::latest()->take(5)->get();
-    
+
         return view('pages.singleevent', compact('newsItem', 'latestNews'));
+    }
+
+    public function getGraduantsResults()
+    {
+        return view('pages.results');
     }
 }

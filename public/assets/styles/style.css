@@ -455,7 +455,7 @@ section
 	top: 0;
 	right: -50vw;
 	width: 50vw;
-	height: 100vh;
+	height: 50vh;
 	background: #FFFFFF;
 	z-index: 12;
 	-webkit-transition: all 0.6s ease;
@@ -833,7 +833,7 @@ section
 .hero_boxes_inner
 {
 	position: absolute;
-	top: -212px;
+	top: -450px;
 	left: 0;
 	width: 100%;
 }
@@ -1037,7 +1037,8 @@ section
 	border: none;
 	padding-left: 27px;
 	font-weight: 500;
-	color: #1a1a1a;
+	color: #000000;
+	outline: solid 2px #A0002A;
 }
 .newsletter_email:focus
 {

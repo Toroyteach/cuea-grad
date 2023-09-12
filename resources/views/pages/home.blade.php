@@ -10,38 +10,28 @@
 
             <!-- Hero Slide -->
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image:url({{ asset ( 'assets/images/slider_background.jpg)')}} "></div>
+                <div class="hero_slide_background" style="background-image:url({{ asset ( 'assets/images/1.jpg')}})"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
                     </div>
                 </div>
             </div>
 
             <!-- Hero Slide -->
-            <div class="hero_slide">
+            <!-- <div class="hero_slide">
                 <div class="hero_slide_background" style="background-image:url({{ asset ( 'assets/images/slider_background.jpg')}})"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                    <div class="hero_slide_content text-center">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-                    </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Hero Slide -->
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image:url({{ asset ( 'assets/images/slider_background.jpg')}})"></div>
+                <div class="hero_slide_background" style="background-image:url({{ asset ( 'assets/images/1.jpg')}})"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                    <div class="hero_slide_content text-center">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-                    </div>
                 </div>
             </div>
 
         </div>
-
-        <div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
-        <div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
     </div>
 
 </div>
@@ -49,6 +39,9 @@
 <div class="hero_boxes">
     <div class="hero_boxes_inner">
         <div class="container">
+
+            @include('includes.timer')
+
             <div class="row">
 
                 <div class="col-lg-4 hero_box_col">
@@ -148,11 +141,11 @@
                                         @endforeach
 
                                     </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <a class="carousel-control-prev" href="#carousel-one" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
-                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <a class="carousel-control-next" href="#carousel-one" role="button" data-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
@@ -164,9 +157,13 @@
                         </div>
 
                     </div>
+
+
                 </div>
             </div>
             @endforeach
+
+
 
             @else
             <div class="alert alert-warning">
@@ -176,6 +173,8 @@
 
         </div>
 
+
+        {!! $latestNews->links() !!}
     </div>
 </div>
 
@@ -183,20 +182,20 @@
 <div class="testimonials page_section text-center" id="faq">
     <!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
     <div class="testimonials_background_container prlx_parent">
-        <div class="testimonials_background prlx" style="background-image:url({{ asset ( 'assets/images/testimonials_background.jpg')}})"></div>
+        <div class="testimonials_background prlx" style="background-image:url({{ asset ( 'assets/images/1.jpg')}})"></div>
     </div>
 
     <h1>Frequently Asked Questions</h1>
 
     <div class="d-flex justify-content-center">
         @if($faqs->count() > 0)
-        <div class="col-8">
+        <div class="col-md-10 col-sm-12 col-lg-8">
             @foreach($faqs as $faq)
 
             <details class="accordion">
                 <summary class="accordion-btn text-dark">{{ $faq->question }}</summary>
                 <div class="accordion-content">
-                    <p>
+                    <p class="text-justify text-dark">
                         {{ $faq->answer }}.
                     </p>
                 </div>

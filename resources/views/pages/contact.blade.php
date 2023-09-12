@@ -4,7 +4,7 @@
 
 <div class="home_">
     <div class="home_background_container_ prlx_parent">
-        <div class="home_background_ prlx" style="background-image:url( {{ asset ( 'assets/images/contact_background.jpg')}} )"></div>
+        <div class="home_background_ prlx" style="background-image:url( {{ asset ( 'assets/images/1.jpg')}} )"></div>
     </div>
     <div class="home_content_">
         <h1>Contact</h1>
@@ -18,8 +18,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="about">
-                    <div class="about_title">Join Courses</div>
-                    <p class="about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus.</p>
+                    <div class="about_title">Contact Us</div>
 
                     <div class="contact_info">
                         <ul>
@@ -27,18 +26,18 @@
                                 <div class="contact_info_icon">
                                     <img src="{{ asset('assets/images/placeholder.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
-                                Blvd Libertad, 34 m05200 Arévalo
+                                Bogani E Rd, Nairobi
                             </li>
                             <li class="contact_info_item">
                                 <div class="contact_info_icon">
                                     <img src="{{ asset('assets/images/smartphone.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
-                                0034 37483 2445 322
+                                0709691024 | 0709 691164
                             </li>
                             <li class="contact_info_item">
                                 <div class="contact_info_icon">
                                     <img src="{{ asset('assets/images/envelope.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>hello@company.com
+                                </div>admissions@cuea.edu
                             </li>
                         </ul>
                     </div>

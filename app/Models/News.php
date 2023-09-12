@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class News extends Model implements HasMedia
 {
     use HasFactory;
-    use SoftDeletes;
+    //use SoftDeletes;
     use InteractsWithMedia;
 
     protected $fillable = [

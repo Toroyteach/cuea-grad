@@ -177,6 +177,17 @@
 
 @media only screen and (max-width: 991px)
 {
+	.home
+	{
+		width: 100%;
+		height: 50vh;
+	}
+
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
+
 	.main_nav_container
 	{
 		display: none;
@@ -293,6 +304,11 @@
 	{
 		display: none;
 	}
+
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
 }
 
 /************
@@ -305,6 +321,11 @@
 	{
 		display: none;
 	}
+
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
 }
 
 /************
@@ -313,6 +334,12 @@
 
 @media only screen and (max-width: 767px)
 {
+
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
+
 	.menu_container
 	{
 		right: -100vw;
@@ -355,6 +382,11 @@
 
 @media only screen and (max-width: 575px)
 {
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
+
 	h1{font-size: 24px;}
 	p{font-size:13px;}
 	.header
@@ -495,8 +527,20 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
 }
+
+@media screen and (max-width: 540px) {
+	.flex {
+	  flex-direction: column;
+	}
+	.flex2 {
+	  border: none;
+	}
+  }
 
 /************
 12. 480px
@@ -504,7 +548,10 @@
 
 @media only screen and (max-width: 480px)
 {
-	
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
 }
 
 /************
@@ -513,6 +560,11 @@
 
 @media only screen and (max-width: 479px)
 {
+	.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
+
 	.header
 	{
 		height: 60px;
@@ -563,5 +615,8 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+		.countdown span {
+		font-size: 20px;
+		margin-left: 0.8rem;
+	  }
 }
