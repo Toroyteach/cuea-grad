@@ -22,7 +22,7 @@ class HomeController extends Controller
 
         // Retrieve latest news
         $latestNews = News::where('is_published', true)
-            ->where('published_date', '>', Carbon::now())
+            ->where('published_date', '<', Carbon::now())
             ->orderBy('published_date', 'desc')
             ->paginate(3);
 
@@ -35,7 +35,7 @@ class HomeController extends Controller
     {
 
         $news = News::where('is_published', true)
-            ->where('published_date', '>', Carbon::now())
+            ->where('published_date', '<', Carbon::now())
             ->orderBy('published_date', 'desc')
             ->paginate(6);
 

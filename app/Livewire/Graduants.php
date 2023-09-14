@@ -24,7 +24,7 @@ class Graduants extends Component
     public $graduate = [];
 
     protected $rules = [
-        'admission' => 'required|integer|digits:7',
+        'admission' => 'required|integer|min:4',
     ];
 
 
@@ -41,7 +41,7 @@ class Graduants extends Component
         $this->showResultsDiv = false;
 
         try {
-            $this->rateLimit(5);
+            $this->rateLimit(10);
             // Define a unique cache key based on the admission number
             $cacheKey = 'graduate_' . $this->admission;
     

@@ -14,6 +14,8 @@ class ListGraduantsResults extends ListRecords
 {
     protected static string $resource = GraduantsResultsResource::class;
 
+    public $fileupload;
+
     protected function getHeaderActions(): array
     {
         return [
@@ -26,16 +28,13 @@ class ListGraduantsResults extends ListRecords
         return view('pages.filament.uploadfile');
     }
 
-    public $file;
-
     public function save()
     {
-        
-        if($this->file != ''){
+        if($this->fileupload != ''){
 
             GraduantsResults::truncate();
 
-            Excel::import(new GraduantsResultsImport, $this->file);
+            Excel::import(new GraduantsResultsImport, $this->fileupload);
         }
     }
 }

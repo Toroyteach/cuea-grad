@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">
-                    <h1>Submit Admission Number</h1>
+                    <h1>Check Details</h1>
+                    <p>Submit your admission number below to view your details</p>
                 </div>
             </div>
         </div>
@@ -58,6 +59,11 @@
         <div class="container">
             <div class="text-center">
                 <h2>Student Information</h2>
+                <div class="alert alert-warning" role="alert">
+                    This is how your information shall appear on Graduation Magazine and Graduation Certificate.
+                    <br />
+                    Please visit the Registry if there is any issue with Your Details
+                </div>
             </div>
             <div class="rcontainer flex row">
                 <div class=" col-md-6 col-lg-6 col-sm-12 flex_content table-responsive">
@@ -82,16 +88,12 @@
                     <table class="table">
                         <tbody>
                             <tr>
+                                <th>Faculty:</th>
+                                <td>{{ $graduate->school_faculty }}</td>
+                            </tr>
+                            <tr>
                                 <th>Specialization:</th>
                                 <td>{{ $graduate->specialization }}</td>
-                            </tr>
-                            <tr>
-                                <th>Degree Class:</th>
-                                <td>{{ $graduate->degree_class }}</td>
-                            </tr>
-                            <tr>
-                                <th>Mean Score:</th>
-                                <td>{{ $graduate->mean_score }}</td>
                             </tr>
                         </tbody>
                     </table>

@@ -41,7 +41,7 @@
                             <li class="main_nav_item"><a href="{{ route('home')}}">home</a></li>
                             <li class="main_nav_item"><a href="{{ route('events')}}">news</a></li>
                             <li class="main_nav_item"><a href="{{ route('resources')}}">Resources</a></li>
-                            <li class="main_nav_item"><a href="{{ route('score')}}">Results</a></li>
+                            <li class="main_nav_item"><a href="{{ route('score')}}">Check Graduation Status</a></li>
                             <li class="main_nav_item"><a href="{{ route('contact')}}">contact</a></li>
                         </ul>
                     </div>
@@ -183,18 +183,18 @@
                 <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
                     <div class="footer_copyright">
                         <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>
+                            Copyright &copy; <script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | Designed by <a href="https://toroyteach.com" target="_blank">Toroyteach</a>
+                            </script> CUEA | Designed by <a href="https://toroyteach.com" target="_blank">Toroyteach</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
                     </div>
                     <div class="footer_social ml-sm-auto">
                         <ul class="menu_social">
-                            <li class="menu_social_item"><a href="https://www.youtube.com/channel/UCkPi1mamzw2vcA97zWS76lw"><i class="fab fa-youtube"></i></a></li>
+                            <li class="menu_social_item"><a href="https://www.youtube.com/channel/UCkPi1mamzw2vcA97zWS76lw" target="_blank"><i class="fab fa-youtube"></i></a></li>
                             <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="menu_social_item"><a href="https://www.instagram.com/cuea_official/"><i class="fab fa-instagram"></i></a></li>
-                            <li class="menu_social_item"><a href="https://www.facebook.com/TheCatholicUniversityOfEasternAfricaCuea?ref=bookmarks"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="menu_social_item"><a href="https://www.instagram.com/cuea_official/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li class="menu_social_item"><a href="https://www.facebook.com/TheCatholicUniversityOfEasternAfricaCuea?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="menu_social_item"><a href="https://twitter.com/cuea_official" target="_blank"><i class="fab fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>

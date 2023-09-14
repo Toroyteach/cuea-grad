@@ -91,12 +91,10 @@
         <div class="font-bold text-3xl">Graduants Results</div>
         <br />
 
-        <form class="w-full max-w-sm" wire:submit="save">
+        <form class="w-full max-w-sm" wire:submit="save" enctype="multipart/form-data">
             <div class="flex items-center border-b border-teal-500 py-2">
-                <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="file" wire:model="file" placeholder="Upload File" aria-label="Full name">
-                <button style="background-color: #A0002A;" class="flex-shrink-0 bg-green-700 text-md text-white border-4 py-1 px-2 rounded" type="submit">
-                    Submit
-                </button>
+                <input type="file" wire:model="fileupload" name="fileupload" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                <button style="background-color: #A0002A;" class="flex-shrink-0 bg-green-700 text-md text-white border-4 py-1 px-2 rounded" type="submit"> Submit</button>
             </div>
         </form>
         

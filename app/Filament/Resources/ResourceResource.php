@@ -37,7 +37,7 @@ class ResourceResource extends Resource
                     ->required(),
                     Select::make('graduation_id')
                             ->label('Choose a Graduation')
-                            ->options(Graduation::all()->pluck('graduation_date', 'id'))
+                            ->options(Graduation::all()->pluck('title', 'id')->toArray())
                             ->searchable()
                             ->required(),
                     SpatieMediaLibraryFileUpload::make('file')
