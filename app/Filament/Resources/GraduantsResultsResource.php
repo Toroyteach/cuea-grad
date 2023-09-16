@@ -64,13 +64,9 @@ class GraduantsResultsResource extends Resource
                 ->label('Admission No')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('gender'),
                 Tables\Columns\TextColumn::make('specialization'),
-                Tables\Columns\TextColumn::make('mean_score'),
-                Tables\Columns\TextColumn::make('degree_class'),
-                Tables\Columns\TextColumn::make('level'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('phone'),
+                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\TextColumn::make('status_msg'),
             ])
             ->filters([
                 //

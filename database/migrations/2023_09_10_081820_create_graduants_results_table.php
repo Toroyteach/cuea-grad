@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('specialization')->nullable();
             $table->string('mean_score')->nullable();
+            $table->string('status')->nullable();
+            $table->text('status_msg')->nullable();
             $table->string('degree_class')->nullable();
             $table->string('level')->nullable();
             $table->string('email')->nullable();

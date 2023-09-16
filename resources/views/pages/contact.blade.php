@@ -22,19 +22,19 @@
 
                     <div class="contact_info">
                         <ul>
-                            <li class="contact_info_item">
-                                <div class="contact_info_icon">
+                            <li class="contact_info_item text-dark">
+                                <div class="contact_info_icon ">
                                     <img src="{{ asset('assets/images/placeholder.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
                                 Bogani E Rd, Nairobi
                             </li>
-                            <li class="contact_info_item">
+                            <li class="contact_info_item text-dark">
                                 <div class="contact_info_icon">
                                     <img src="{{ asset('assets/images/smartphone.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
                                 0709691024 | 0709 691164
                             </li>
-                            <li class="contact_info_item">
+                            <li class="contact_info_item text-dark">
                                 <div class="contact_info_icon">
                                     <img src="{{ asset('assets/images/envelope.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>admissions@cuea.edu

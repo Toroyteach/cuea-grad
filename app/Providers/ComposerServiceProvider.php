@@ -34,13 +34,16 @@ class ComposerServiceProvider extends ServiceProvider
 
                 $formattedDate = $timer->target_date;
                 $title = $timer->title;
+                $titledeadline = $timer->titledeadline;
     
                 $view->with('timer', $formattedDate);
                 $view->with('timertitle', $title);
+                $view->with('timerdeadline', $titledeadline);
             } else {
 
                 $view->with('timer', null);
                 $view->with('timertitle', '');
+                $view->with('timerdeadline', '');
             }
 
         });

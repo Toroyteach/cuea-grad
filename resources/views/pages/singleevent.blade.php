@@ -73,11 +73,11 @@
                         </div>
 
                         <div class="news_post_quote">
-                            <p class="news_post_quote_text">{{ $newsItem->excerpt }}.</p>
+                            <p class="news_post_quote_text text-dark">{{ $newsItem->excerpt }}.</p>
                         </div>
 
                         <div class="news_post_text">
-                            <p>{{ $newsItem->content }}. </p>
+                            <p class="text-dark">{{ $newsItem->content }}. </p>
                         </div>
 
                     </div>

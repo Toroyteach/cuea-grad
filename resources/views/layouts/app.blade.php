@@ -75,9 +75,9 @@
                 <div class="menu menu_mm">
                     <ul class="menu_list menu_mm">
                         <li class="menu_item menu_mm"><a href="{{ route('home')}}">Home</a></li>
-                        <li class="menu_item menu_mm"><a href="{{ route('events')}}">events</a></li>
-                        <li class="menu_item menu_mm"><a href="{{ route('resources')}}">resources</a></li>
-                        <li class="menu_item menu_mm"><a href="{{ route('score')}}">Results</a></li>
+                        <li class="menu_item menu_mm"><a href="{{ route('events')}}">News</a></li>
+                        <li class="menu_item menu_mm"><a href="{{ route('resources')}}">Resources</a></li>
+                        <li class="menu_item menu_mm"><a href="{{ route('score')}}">Check Graduation Status</a></li>
                         <li class="menu_item menu_mm"><a href="{{ route('contact')}}">Contact</a></li>
                     </ul>
 

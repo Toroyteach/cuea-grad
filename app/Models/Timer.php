@@ -13,6 +13,7 @@ class Timer extends Model
 
     protected $fillable = [
         'title',
+        'titledeadline',
         'target_date',
         'is_active',
         'admin_id',

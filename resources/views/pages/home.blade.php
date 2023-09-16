@@ -100,7 +100,7 @@
             @if($latestNews->count() > 0)
 
             @foreach($latestNews as $news)
-            <div class="row event_item">
+            <div class="row event_item" style="box-shadow: 5px 5px 8px 12px #bfb6b6; padding: 10px">
                 <div class="col">
                     <div class="row d-flex flex-row align-items-end">
 
@@ -114,11 +114,11 @@
                         <div class="col-lg-6 order-lg-2 order-3">
                             <div class="event_content">
                                 <div class="event_name"><a class="trans_200" href="{{ route('single', $news->id) }}">{{ $news->title }}</a></div>
-                                <p>{{ Illuminate\Support\Str::limit($news->content, 40) }}</p>
+                                <p class="text-dark">{{ Illuminate\Support\Str::limit($news->content, 40) }}</p>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 order-lg-3 order-1">
+                        <div class="col-lg-4 order-lg-3 order-1" style="max-height: 250px;">
                             <div class="event_image">
 
                                 @if($news->media->count() > 0)
@@ -131,10 +131,10 @@
                                     <div class="carousel-inner">
 
                                         @foreach($news->media as $index => $mediaItem)
-                                        <div class="carousel-item parent-div {{ ($index === 0) ? 'active' : '' }}">
+                                        <div class="carousel-item {{ ($index === 0) ? 'active' : '' }}">
                                             @if($mediaItem->collection_name === 'images')
 
-                                            <img src="{{ $mediaItem->getUrl() }}" class="d-block w-100" alt="Image">
+                                            <img src="{{ $mediaItem->getUrl() }}" class="img-fluid" style="height:250px; width:auto;" alt="Image">
 
                                             @endif
                                         </div>

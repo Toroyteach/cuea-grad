@@ -2,7 +2,14 @@
 
     <!-- Countdown 4-->
     <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
-        <h3 class="mb-0 font-weight-bold text-white">{{ $timertitle }}</h3>
+
+        <div class="" style="display: none;" id="timerdeadline">
+            <h2 class="mb-0 font-weight-bold text-white">{{ $timerdeadline }}</h2>
+        </div>
+
+        <h3 class="mb-0 font-weight-bold text-white" id="timertitle">{{ $timertitle }}</h3>
+
+
         <div id="clock-c" class="countdown">
             <span id="days"></span>days
             <span id="hours"></span>Hours
@@ -51,8 +58,13 @@
             // Hide the countdown when date is reached
             if (distance <= 0) {
                 document.getElementById("clock-c").style.display = "none";
+                document.getElementById("timerdeadline").style.display = "block";
+                document.getElementById("timertitle").style.display = "none";
                 clearInterval(x);
             }
         }, 1000);
+    } else {
+
+        document.getElementById("clock-c").style.display = "none";
     }
 </script>

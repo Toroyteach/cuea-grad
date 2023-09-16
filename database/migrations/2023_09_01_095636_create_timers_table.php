@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('timers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->text('titledeadline');
             $table->dateTime('target_date');
             $table->boolean('is_active')->default(false);
             $table->timestamps();

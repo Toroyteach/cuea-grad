@@ -55,21 +55,23 @@
                             </div>
                             @endif
                         </div>
-                        <div class="news_post_top d-flex flex-column flex-sm-row">
-                            <div class="news_post_date_container">
-                                <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-                                    <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('d') }}</div>
-                                    <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('M') }}</div>
+                        <div style="box-shadow: 5px 5px 8px 12px #bfb6b6; padding: 10px;">
+                            <div class="news_post_top d-flex flex-column flex-sm-row">
+                                <div class="news_post_date_container">
+                                    <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
+                                        <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('d') }}</div>
+                                        <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('M') }}</div>
+                                    </div>
+                                </div>
+                                <div class="news_post_title_container">
+                                    <div class="news_post_title">
+                                        <a href="{{ route('single', $newsItem->id) }}">{{ $newsItem->title }}</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="news_post_title_container">
-                                <div class="news_post_title">
-                                    <a href="{{ route('single', $newsItem->id) }}">{{ $newsItem->title }}</a>
-                                </div>
+                            <div class="news_post_text">
+                                <p class="text-dark">{{ Illuminate\Support\Str::limit($newsItem->content, 40) }}</p>
                             </div>
-                        </div>
-                        <div class="news_post_text">
-                            <p>{{ Illuminate\Support\Str::limit($newsItem->content, 40) }}</p>
                         </div>
                         <div class="news_post_button text-center trans_200">
                             <a href="{{ route('single', $newsItem->id) }}">Read More</a>

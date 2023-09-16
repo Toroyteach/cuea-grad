@@ -4,7 +4,7 @@
             <div class="col">
                 <div class="section_title text-center">
                     <h1>Check Details</h1>
-                    <p>Submit your admission number below to view your details</p>
+                    <p class="text-dark">Submit your admission number below to view your details</p>
                 </div>
             </div>
         </div>
@@ -59,12 +59,27 @@
         <div class="container">
             <div class="text-center">
                 <h2>Student Information</h2>
+
+                @if($graduate->status != 'Cleared')
                 <div class="alert alert-warning" role="alert">
+                    {{ $graduate->status_msg }}
+                </div>
+                @else
+
+                <div class="alert alert-success" role="alert">
+                    {{ $graduate->status_msg }}
+                </div>
+
+                <div class="alert alert-info" role="alert">
                     This is how your information shall appear on Graduation Magazine and Graduation Certificate.
                     <br />
                     Please visit the Registry if there is any issue with Your Details
                 </div>
+                @endif
             </div>
+
+
+            @if($graduate->status === 'Cleared')
             <div class="rcontainer flex row">
                 <div class=" col-md-6 col-lg-6 col-sm-12 flex_content table-responsive">
                     <table class="table">
@@ -95,11 +110,18 @@
                                 <th>Specialization:</th>
                                 <td>{{ $graduate->specialization }}</td>
                             </tr>
+                            <tr>
+                                <th>Programme:</th>
+                                <td>{{ $graduate->programme }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
             </div>
+            @endif
+
+
         </div>
         @endif
 

@@ -26,6 +26,9 @@ class TimerResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('titledeadline')->label('Deadline Message')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\DateTimePicker::make('target_date')
                     ->required(),
                 Forms\Components\Toggle::make('is_active')
@@ -68,14 +71,14 @@ class TimerResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -83,5 +86,5 @@ class TimerResource extends Resource
             'create' => Pages\CreateTimer::route('/create'),
             'edit' => Pages\EditTimer::route('/{record}/edit'),
         ];
-    }    
+    }
 }
