@@ -37,7 +37,7 @@
                     </div>
                     <form wire:submit.prevent="getResults">
                         <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                            <input id="newsletter_email" class="newsletter_email" wire:model="admission" type="text" placeholder="12345..." required="required">
+                            <input autocomplete="off" id="newsletter_email" class="newsletter_email" wire:model="admission" type="text" placeholder="12345..." required="required">
                             <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Submit</button>
                         </div>
                     </form>
