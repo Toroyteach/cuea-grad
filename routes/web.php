@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use Laravel\Telescope\Telescope;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +14,8 @@ use Laravel\Telescope\Telescope;
 |
 */
 
+Route::redirect('/home', '/');
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/resources', [HomeController::class, 'resources'])->name('resources');
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 Route::get('/score', [HomeController::class, 'getGraduantsResults'])->name('score');
