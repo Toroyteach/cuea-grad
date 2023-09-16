@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Laravel\Telescope\Telescope;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +24,3 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/news/{id}', [HomeController::class, 'showNews'])->name('single');
 
 Route::post('contact/post', [HomeController::class, 'storeFeedback'])->name('student.contact');
-
-// php artisan filament:resource Admin
-// php artisan filament:resource NewsletterSubscription
-// php artisan filament:resource Graduation
-// php artisan filament:resource Timer
-// php artisan filament:resource Resource
-// php artisan filament:resource News
-// php artisan filament:resource Message
-// php artisan filament:resource Faq
-// php artisan filament:resource User

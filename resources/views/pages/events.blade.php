@@ -59,8 +59,8 @@
                             <div class="news_post_top d-flex flex-column flex-sm-row">
                                 <div class="news_post_date_container">
                                     <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-                                        <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('d') }}</div>
-                                        <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('M') }}</div>
+                                        <div>{{ \Carbon\Carbon::parse($newsItem->event_date)->format('d') }}</div>
+                                        <div>{{ \Carbon\Carbon::parse($newsItem->eventshed_date)->format('M') }}</div>
                                     </div>
                                 </div>
                                 <div class="news_post_title_container">
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                             <div class="news_post_text">
-                                <p class="text-dark">{{ Illuminate\Support\Str::limit($newsItem->content, 40) }}</p>
+                                <p class="text-dark">{{ Illuminate\Support\Str::limit($newsItem->content, 100) }}</p>
                             </div>
                         </div>
                         <div class="news_post_button text-center trans_200">
@@ -79,7 +79,7 @@
                     </div>
                     @empty
                     <div class="alert alert-info">
-                        No news available.
+                        No News available.
                     </div>
                     @endforelse
                 </div>

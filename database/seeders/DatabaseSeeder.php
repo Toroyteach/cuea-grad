@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Administrator',
-            'email' => 'administrator@cuea.edu',
-            'password' => '$2a$12$CQgXt8PsCtg51Y5L2d/bgugHs3GUEWG9DTnIhdheIFCU975/JYqoW' //cuea@2023-graduation
+            'name' => 'Admin',
+            'email' => 'user@gmail.com',
+            'password' => '$2y$10$o6JeB4aHkyDwWYvhq7Ojdua88vKdhgT2nyB7clyy8girIH4jPfXLG' //12345678
         ]);
 
         //GraduantsResults::factory(5000)->create();

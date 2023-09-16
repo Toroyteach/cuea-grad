@@ -37,7 +37,7 @@
                     </div>
                     <form wire:submit.prevent="getResults">
                         <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                            <input id="newsletter_email" class="newsletter_email" wire:model="admission" type="number" placeholder="12345..." required="required">
+                            <input id="newsletter_email" class="newsletter_email" wire:model="admission" type="text" placeholder="12345..." required="required">
                             <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Submit</button>
                         </div>
                     </form>
@@ -70,16 +70,11 @@
                     {{ $graduate->status_msg }}
                 </div>
 
-                <div class="alert alert-info" role="alert">
-                    This is how your information shall appear on Graduation Magazine and Graduation Certificate.
-                    <br />
-                    Please visit the Registry if there is any issue with Your Details
-                </div>
                 @endif
             </div>
 
 
-            @if($graduate->status === 'Cleared')
+            @if($graduate->status === 'Cleared' || $graduate->status === 'cleared' || $graduate->status === 'CLEARED')
             <div class="rcontainer flex row">
                 <div class=" col-md-6 col-lg-6 col-sm-12 flex_content table-responsive">
                     <table class="table">
@@ -117,7 +112,11 @@
                         </tbody>
                     </table>
                 </div>
-
+                <div class="alert alert-warning text-dark text-center" role="alert">
+                    This is how your information shall appear on Graduation Magazine and Graduation Certificate.
+                    <br />
+                    Please visit the Registry if there is any issue with Your Details
+                </div>
             </div>
             @endif
 

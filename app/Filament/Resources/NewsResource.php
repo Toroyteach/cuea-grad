@@ -35,6 +35,8 @@ class NewsResource extends Resource
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
+                Forms\Components\DatePicker::make('event_date')
+                    ->required(),
                 Forms\Components\DatePicker::make('published_date')
                     ->required(),
                 Forms\Components\Toggle::make('is_published')
@@ -50,6 +52,9 @@ class NewsResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('published_date')
+                    ->date()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('event_date')
                     ->date()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('is_published')
@@ -78,14 +83,14 @@ class NewsResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -93,5 +98,5 @@ class NewsResource extends Resource
             'create' => Pages\CreateNews::route('/create'),
             'edit' => Pages\EditNews::route('/{record}/edit'),
         ];
-    }    
+    }
 }

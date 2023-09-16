@@ -24,7 +24,7 @@ class Graduants extends Component
     public $graduate = [];
 
     protected $rules = [
-        'admission' => 'required|integer|min:4',
+        'admission' => 'required|min:4',
     ];
 
 

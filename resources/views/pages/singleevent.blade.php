@@ -61,8 +61,8 @@
                         <div class="news_post_top d-flex flex-column flex-sm-row">
                             <div class="news_post_date_container">
                                 <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-                                    <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('d') }}</div>
-                                    <div>{{ \Carbon\Carbon::parse($newsItem->published_date)->format('M') }}</div>
+                                    <div>{{ \Carbon\Carbon::parse($newsItem->event_date)->format('d') }}</div>
+                                    <div>{{ \Carbon\Carbon::parse($newsItem->event_date)->format('M') }}</div>
                                 </div>
                             </div>
                             <div class="news_post_title_container">

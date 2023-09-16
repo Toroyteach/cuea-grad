@@ -18,6 +18,7 @@ class News extends Model implements HasMedia
         'title',
         'content',
         'excerpt',
+        'event_date',
         'published_date',
         'is_published',
         'admin_id',
